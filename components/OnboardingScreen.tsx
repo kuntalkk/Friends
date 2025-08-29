@@ -55,8 +55,8 @@ export default function OnboardingScreen() {
       // Save to Firestore
       await db.collection('users').doc(uid).set(userData);
 
-      // Navigate to home screen
-      router.replace('/');
+      // Navigate to tabs after onboarding
+      router.replace('/(tabs)/friends');
     } catch (error) {
       console.error('Error saving user data:', error);
       Alert.alert('Error', 'Failed to save your information. Please try again.');
